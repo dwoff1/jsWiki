@@ -6,12 +6,63 @@
 -->
 <html>
     <head>
-        <title id='pageTitle'>JS Wiki</title>
+        <title id='pageTitle'>!ERROR!</title>
+        <script src="./js/errHandle.js"></script>
+        <script src="./js/config.js"></script>
+        <script src="./js/shortkey.js"></script>
+        <style>
+            .mainInfo
+            {
+                background: lightgoldenrodyellow;
+                border: 2px solid grey;
+                width: 22rem;
+            }
+            .width100
+            {
+                width: 100%;
+            }
+            .note
+            {
+                border: 2px solid grey;
+                font-style: bold;
+                color: red;
+                width: 45%;
+                text-align: center;
+                padding:0.3rem;
+            }
+        </style>
     </head>
     <body>
-        <h1> Test heading</h1>
+        <h1 id='mainTitle'> !ERROR!</h1>
+        <p id="pageReason" class='width100'> To be used for VPN connectivity issues for devices</p>
+        <div class="mainInfo" id='mainInfo'>
+            <p>
+                <b>Classification: </b><br>
+                <b>Support Contact: </b>NA<br>
+                <b>Device: </b>Laptop/desktop<br>
+                <b>Model/OS: </b>Dell Latitude 5050 Windows 10<br>
+                <b>Issue Description: </b><br>
+                <b>Troubleshooting: </b><br>
+            </p>
+        </div>
+        <div id="troubleBody">
+            <div id='keyNote' class='Note'>
+                iPhone has patched out pptp support. (link)
+            </div>
+            <div id="controls"><button title="Expand to view all info">Expand All</button><button>Colapse All</button></div>
+            
+            <ol>
+                <li>Determine Device type </li>
+                <button> Laptop </button>
+                <button> Desktop </button>
+                <button> Mobile </button>
+                <button> Tablet </button>
+            </ol>
+        </div>
     </body>
     <footer>
-
+        <script>
+            loadJSON();    
+        </script>
     </footer>
 </html>
