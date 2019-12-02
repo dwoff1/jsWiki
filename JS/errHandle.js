@@ -14,9 +14,10 @@
  */
 
 //-------------GLOBAL VARS
-    var errList;
-    var errLoc;
+    var errList =[];
+    var errLoc = [];
     var currentErrLocId = 0;
+    var testv; //a testing var (ie store parts)
 //-------------FUNCTIONS
 
 function devlog(msg)
@@ -42,7 +43,7 @@ function customError(type, msg, displayLoc, isError, append)
     var midWording = " - ";
     if(isError)
          midWording = " error - ";
-    fMsg = type + midWording + msg;
+    fMsg = (type + midWording + msg);
     errList.push(fMsg);//always push a error to array stack
     switch(displayLoc)
     {

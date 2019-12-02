@@ -16,8 +16,7 @@
             {
                 background: lightgoldenrodyellow;
                 border: 2px solid grey;
-                width: max-content;
-                padding: 1rem;
+                width: 22rem;
             }
             .width100
             {
@@ -44,9 +43,9 @@
         <div class="mainInfo" id='mainInfo'>
             <p>
                 <b>Classification: </b><br>
-                <b>Support Contact: </b><br>
-                <b>Device: </b><br>
-                <b>Model/OS: </b><br>
+                <b>Support Contact: </b>NA<br>
+                <b>Device: </b>Laptop/desktop<br>
+                <b>Model/OS: </b>Dell Latitude 5050 Windows 10<br>
                 <b>Issue Description: </b><br>
                 <b>Troubleshooting: </b><br>
             </p>
@@ -57,8 +56,12 @@
             </div>
             <div id="controls"><button title="Expand to view all info">Expand All</button><button>Colapse All</button></div>
             
-            <ol id="mainBody">
-                
+            <ol>
+                <li>Determine Device type </li>
+                <button onclick="triggerButton(this, 'aTest')"> Laptop </button>
+                <button> Desktop </button>
+                <button> Mobile </button>
+                <button> Tablet </button>
             </ol>
         </div>
     </body>
