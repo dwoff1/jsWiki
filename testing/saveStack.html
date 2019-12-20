@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <title id='pageTitle'>A test page</title>
+    <script src="/jsWiki/js/errHandle.js"></script>
+    <script src="/jsWiki/js/config.js"></script>
+    <script src="/jsWiki/js/shortkey.js"></script>
+    <script src="/jsWiki/js/misc.js"></script>
+    <style>
+        .mainInfo
+        {
+            background: lightgoldenrodyellow;
+            border: 2px solid grey;
+            width: max-content;
+            padding: 1rem;
+        }
+        .width100
+        {
+            width: 100%;
+        }
+        .note
+        {
+            border: 2px solid grey;
+            font-style: bold;
+            color: red;
+            width: 45%;
+            text-align: center;
+            padding:0.3rem;
+        }
+        .active
+        {
+            background: cornsilk;
+        }
+        .io1
+        {
+            height: 1rem;
+            resize: horizontal;
+        }
+    </style>
+</head>
+<body>
+    <h1 id='mainTitle'> main title</h1>
+    <p id="pageReason" class='width100'> reason of the page</p>
+    <div class="mainInfo" id='mainInfo'>
+        <p>
+            <b>Classification: </b> <textarea class='io1'>Classification of</textarea><br>
+            <b>Support Contact: </b> <textarea class='io1'>Support Contact #</textarea><br>
+            <b>Device: </b> <textarea class='io1'>Whats the device </textarea><br>
+            <b>Model/OS: </b> <textarea class='io1'> Whats the OS</textarea><br>
+            <b>Issue Description: </b> <textarea class='io1'> A discription of the issue</textarea><br>
+            <b>Troubleshooting: </b><br>
+        </p>
+    </div>
+    <div id="troubleBody">
+        <div id='keyNote' class='Note'>
+            iPhone has patched out pptp support. (link)
+        </div>
+        <div id="controls"><button title="Expand to view all info">Expand All</button><button>Colapse All</button></div>
+        
+        <ol id="mainBody">
+            
+        </ol>
+    </div>
+</body>
+<footer>
+    <textarea style="width: 40rem; height: 10rem;">
+##error SAVING or JS error##
+    </textarea>
+    <script>
+        /*
+var obj = { name: "John", age: 30, city: "New York" };
+var myJSON = JSON.stringify(obj);
+document.getElementById("demo").innerHTML = myJSON;
+        */
+        try{
+            document.getElementById('keyNote').innerText = defaultAStore['keynote'];
+        } catch{devlog("Fail at keynote, likely no keynote");}
+        var jsonString;
+        //test saving
+        document.getElementsByTagName('textarea')[document.getElementsByTagName('textarea').length-1].innerText = "Area accessable, startng save";
+        //make json string
+        jsonString = {  ver: 1, 
+                        pTitle: document.getElementById('pageTitle').innerText, 
+                        mTitle: document.getElementById('mainTitle').innerText,
+                        reason: document.getElementById('pageReason').innerText,
+                        classif: document.getElementById('mainInfo').getElementsByTagName('textarea')[0].value,
+                        contact: document.getElementById('mainInfo').getElementsByTagName('textarea')[1].value,
+                        device: document.getElementById('mainInfo').getElementsByTagName('textarea')[2].value,
+                        misc: document.getElementById('mainInfo').getElementsByTagName('textarea')[3].value,
+                        issueDesc: document.getElementById('mainInfo').getElementsByTagName('textarea')[4].value,                                          
+                     }
+        //add steps
+        var steps = document.getElementsByClassName('aStep');
+        devlog(document.getElementById('mainInfo').classList[0]);
+        for(x=0; x < steps.length; x++)
+            {
+                key = steps[x].classList[1]; //form aStep img subclasses
+                Object.assign(jsonString,{key: "value3"});
+            }
+        //turn to json and output
+        document.getElementsByTagName('textarea')[document.getElementsByTagName('textarea').length-1].innerText = JSON.stringify(jsonString);
+        //loadJSON();
+
+
+        function objectfStep()
+        {
+            for(x=0; x < document.getElementsByClassName('aStep'); x++)
+            {
+                
+            }
+        }
+    </script>
+</footer>
+</html>

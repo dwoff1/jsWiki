@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <title id='pageTitle'>!ERROR!</title>
+    <script src="./js/errHandle.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/shortkey.js"></script>
+    <script src="./js/misc.js"></script>
+    <style>
+        .mainInfo
+        {
+            background: lightgoldenrodyellow;
+            border: 2px solid grey;
+            width: max-content;
+            padding: 1rem;
+        }
+        .width100
+        {
+            width: 100%;
+        }
+        .note
+        {
+            border: 2px solid grey;
+            font-style: bold;
+            color: red;
+            width: 45%;
+            text-align: center;
+            padding:0.3rem;
+        }
+        .active
+        {
+            background: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <h1 id='mainTitle'> !ERROR!</h1>
+    <p id="pageReason" class='width100'> To be used for VPN connectivity issues for devices</p>
+    <div class="mainInfo" id='mainInfo'>
+        <p>
+            <b>Classification: </b><br>
+            <b>Support Contact: </b><br>
+            <b>Device: </b><br>
+            <b>Model/OS: </b><br>
+            <b>Issue Description: </b><br>
+            <b>Troubleshooting: </b><br>
+        </p>
+    </div>
+    <div id="troubleBody">
+        <div id='keyNote' class='Note'>
+            iPhone has patched out pptp support. (link)
+        </div>
+        <div id="controls"><button title="Expand to view all info">Expand All</button><button>Colapse All</button></div>
+        
+        <ol id="mainBody">
+            
+        </ol>
+    </div>
+</body>
+<footer>
+    <script>
+        //loadJSON();    
+    </script>
+</footer>
+</html>
